@@ -15,19 +15,19 @@ class CreateProveedorsTable extends Migration
     {
         Schema::create('proveedors', function (Blueprint $table) {
             $table->id();
-            $table->string('nombreCompañía', 100);
-            $table->string('nombreContacto', 100);
-            $table->string('cargoContacto', 100);
-            $table->string('dirección', 100);
-            $table->string('ciudad', 100);
-            $table->string('región', 100);
-            $table->string('códPostal', 5);
-            $table->string('país', 100);
-            $table->string('teléfono', 17);
-            $table->string('fax', 17);
-            $table->string('páginaPrincipal', 200);
-            $table->decimal('latitud', 8, 6);
-            $table->decimal('longitud', 9, 6);
+            $table->string('nombreCompañía', 100)->nullable();
+            $table->string('nombreContacto', 100)->nullable();
+            $table->string('cargoContacto', 100)->nullable();
+            $table->string('dirección', 100)->nullable();
+            $table->string('ciudad', 100)->nullable();
+            $table->string('región', 100)->nullable();
+            $table->string('códPostal', 5)->nullable();
+            $table->string('país', 100)->nullable();
+            $table->string('teléfono', 17)->nullable();
+            $table->string('fax', 17)->nullable();
+            $table->string('páginaPrincipal', 200)->nullable();
+            $table->decimal('latitud', 8, 6)->nullable();
+            $table->decimal('longitud', 9, 6)->nullable();
             $table->timestamps();
         });
     }

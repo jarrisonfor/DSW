@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Producto;
 use App\Models\Proveedor;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Proveedor::factory()->count(10)->hasProductos(10)->create();
+        Proveedor::factory()
+            ->count(50)
+            ->hasProductos(2)
+            ->create();
     }
 }

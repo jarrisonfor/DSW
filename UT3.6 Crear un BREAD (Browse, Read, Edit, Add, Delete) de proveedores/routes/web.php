@@ -3,20 +3,10 @@
 use App\Http\Controllers\ProveedorController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
 
 Route::resource('proveedor', ProveedorController::class);
+Route::get('proveedor/{proveedor}/pdf', [ProveedorController::class, 'pdf'])->name('proveedor.pdf');
+Route::get('proveedor/{proveedor}/productos', [ProveedorController::class, 'productos'])->name('proveedor.productos');
 
 Route::get('/', function () {
     /* return view('welcome'); */

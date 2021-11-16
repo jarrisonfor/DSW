@@ -16,7 +16,7 @@ class CreateProductosTable extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('producto', 40);
-            $table->foreignId('proveedor_id')->constrained();
+            $table->foreignId('proveedor_id')->constrained()->cascadeOnDelete();
             $table->string('cantidad_por_unidad', 20);
             $table->decimal('precio_unidad', 19, 4);
             $table->smallInteger('unidades_existencia');

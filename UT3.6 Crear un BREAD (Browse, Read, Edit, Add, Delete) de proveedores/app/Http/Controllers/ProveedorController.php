@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pedido;
+use App\Models\Producto;
 use App\Models\Proveedor;
+use Barryvdh\Snappy\Facades\SnappyPdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ProveedorController extends Controller
 {
@@ -93,13 +95,13 @@ class ProveedorController extends Controller
 
     public function pdf(Proveedor $proveedor)
     {
-        $pdf = PDF::loadView('proveedor.pdf', $proveedor);
-        return $pdf->stream($proveedor->id . '.pdf');
+        $pdf = SnappyPdf::loadView('proveedor.pdf', ['proveedor' => $proveedor]);
+        return $pdf->download($proveedor->id . '.pdf');
     }
 
-    public function productos(Pedido $pedido)
+    public function productos(Proveedor $proveedor)
     {
-        return view("UT5_7.index", ['pedido' => $pedido]);
+        return view("producto.index", ['productos' => $proveedor->productos]);
     }
 
     public function contacto(Proveedor $proveedor)
