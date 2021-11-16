@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProveedorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+Route::resource('proveedor', ProveedorController::class);
+
 Route::get('/', function () {
-    return view('welcome');
+    /* return view('welcome'); */
+    redirect('/proveedor');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
