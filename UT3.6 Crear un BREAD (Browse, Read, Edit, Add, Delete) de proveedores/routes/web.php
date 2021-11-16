@@ -10,7 +10,7 @@ Route::get('proveedor/{proveedor}/productos', [ProveedorController::class, 'prod
 
 Route::get('/', function () {
     /* return view('welcome'); */
-    redirect('/proveedor');
+    return redirect()->route('proveedor.index');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
