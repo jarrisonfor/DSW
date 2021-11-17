@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\SocialAuthController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('auth/{provider}', [SocialAuthController::class, 'redirectToProvider'])->name('auth.social');
+Route::get('auth/{provider}/callback', [SocialAuthController::class, 'handleProviderCallback']);
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -10,11 +13,3 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
-
-/* Auth::routes();
-
-Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
-Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
-
-*/

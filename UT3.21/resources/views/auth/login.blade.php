@@ -42,6 +42,12 @@
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}
                 </x-jet-button>
+
+            </div>
+            <div class="flex items-center justify-end mt-4">
+                    <a href="{{ route('auth.social', 'discord') }}">Discord</a>
+                    <a href="{{ route('auth.social', 'twitch') }}">Twitch</a>
+                    <a href="{{ route('auth.social', 'github') }}">Github</a>
             </div>
         </form>
     </x-jet-authentication-card>

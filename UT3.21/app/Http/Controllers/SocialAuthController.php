@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+
 class SocialAuthController extends Controller
 {
     public function redirectToProvider($provider)
@@ -11,24 +15,24 @@ class SocialAuthController extends Controller
 
     public function handleProviderCallback($provider)
     {
-        $social_user = Socialite::driver($provider)->user();
-        if ($user = User::where('email', $social_user->email)->first()) {
-        } else {
-            $user = User::create([
-                'name' => $social_user->name,
-                'email' => $social_user->email,
-				'provider' => $provider,
-                'avatar' => $social_user->avatar,
-            ]);
+        $socialUser = Socialite::driver($provider)->user();
 
+        if ($user = User::where('email', $socialUser->getEmail())->first()) {
             return $this->authAndRedirect($user);
         }
+        $user = User::create([
+            'name' => $socialUser->getName() ?? $socialUser->getNickname(),
+            'email' => $socialUser->getEmail(),
+            'provider' => $provider,
+            'provider_id' => $socialUser->getId(),
+            'avatar' => $socialUser->getAvatar(),
+        ]);
+        return $this->authAndRedirect($user);
     }
 
     public function authAndRedirect($user)
     {
         Auth::login($user);
-
         return redirect()->to('/home#');
     }
 }

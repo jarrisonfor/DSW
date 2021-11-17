@@ -27,6 +27,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'provider_id',
+        'provider',
     ];
 
     /**
@@ -58,4 +60,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function socialMedias()
+    {
+        return $this->hasMany(SocialMedia::class);
+    }
+
 }
