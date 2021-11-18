@@ -12,22 +12,10 @@ class SocialAuthController extends Controller
 {
     public function redirectToProvider($provider)
     {
-        switch ($provider) {
-            case 'twitch':
-                return Socialite::driver($provider)
-                    ->with([
-                        'code' => Str::random(30),
-                        'redirect_uri' => config('services.twitch.redirect')
-                    ])
-                    ->redirect();
-            default:
-                return Socialite::driver($provider)->redirect();
-        }
-
-
+        return Socialite::driver($provider)->redirect();
     }
 
-    public function handleProviderCallback(Request $request, $provider)
+    public function handleProviderCallback($provider)
     {
         $socialUser = Socialite::driver($provider)->user();
 
