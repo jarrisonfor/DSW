@@ -44,10 +44,16 @@
                 </x-jet-button>
 
             </div>
-            <div class="flex items-center justify-end mt-4">
-                    <a href="{{ route('auth.social', 'discord') }}">Discord</a>
-                    <a href="{{ route('auth.social', 'twitch') }}">Twitch</a>
-                    <a href="{{ route('auth.social', 'github') }}">Github</a>
+            <div class="flex items-center justify-end mt-4 pl-28 pr-28">
+                <a href="{{ route('auth.social', 'discord') }}">
+                    <img src="{{ url('img/discord.png') }}" alt="">
+                </a>
+                <a href="{{ route('auth.social', 'twitch') }}">
+                    <img src="{{ url('img/twitch.png') }}" alt="">
+                </a>
+                <a href="{{ route('auth.social', 'github') }}">
+                    <img src="{{ url('img/github.png') }}" alt="">
+                </a>
             </div>
         </form>
     </x-jet-authentication-card>
