@@ -10,7 +10,9 @@ class SocialAuthController extends Controller
 {
     public function redirectToProvider($provider)
     {
-        return Socialite::driver($provider)->redirect();
+        return Socialite::driver($provider)
+            ->with(['code' => '394a8bc98028f39660e53025de824134fb46313'])
+            ->redirect();
     }
 
     public function handleProviderCallback($provider)
