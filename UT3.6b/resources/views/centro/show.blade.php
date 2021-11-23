@@ -20,7 +20,7 @@
                 latitude: "{{ $centro->latitud }}",
                 longitude: "{{ $centro->longitud }}"
             }, {
-                title: "{{ $centro->Denominacion }}"
+                title: "{{ $centro->denominacion }}"
             });
             map.entities.push(pushpin);
         }
