@@ -4,8 +4,8 @@ use App\Http\Controllers\AlumnoController;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get('alumno/pdf', [AlumnoController::class, 'pdf'])->name('alumno.pdf');
 Route::resource('alumno', AlumnoController::class);
-Route::get('alumno/{alumno}/pdf', [AlumnoController::class, 'pdf'])->name('alumno.pdf');
 
 Route::get('/', function () {
     /* return view('welcome'); */

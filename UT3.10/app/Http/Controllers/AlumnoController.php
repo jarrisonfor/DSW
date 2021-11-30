@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAlumnoRequest;
 use App\Http\Requests\UpdateAlumnoRequest;
 use App\Models\Alumno;
+use Barryvdh\Snappy\Facades\SnappyPdf;
 
 class AlumnoController extends Controller
 {
@@ -89,5 +90,11 @@ class AlumnoController extends Controller
     {
         $alumno->delete();
         return redirect('alumno');
+    }
+
+    public function pdf()
+    {
+        $pdf = SnappyPdf::loadView('alumno.pdf', ['alumnos' => Alumno::all()]);
+        return $pdf->download('alumnos.pdf');
     }
 }
