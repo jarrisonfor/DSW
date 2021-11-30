@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Alumno;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,5 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Alumno::factory()->times(250)->create();
     }
 }
