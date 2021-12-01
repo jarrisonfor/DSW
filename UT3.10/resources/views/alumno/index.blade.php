@@ -27,16 +27,16 @@
     <table class="ui celled table">
         <thead>
             <tr>
-                <th class="center aligned">id</th>
-                <th class="center aligned">nombre</th>
-                <th class="center aligned">apellidos</th>
-                <th class="center aligned">email</th>
-                <th class="center aligned">f_nacimiento</th>
-                <th class="center aligned">mes</th>
-                <th class="center aligned">c_postal</th>
-                <th class="center aligned">codigo</th>
-                <th class="center aligned">editar</th>
-                <th class="center aligned">borrar</th>
+                <th class="center aligned">Id</th>
+                <th class="center aligned">Nombre</th>
+                <th class="center aligned">Apellidos</th>
+                <th class="center aligned">Email</th>
+                <th class="center aligned">F. Nacimiento</th>
+                <th class="center aligned">Mes</th>
+                <th class="center aligned">C. Postal</th>
+                <th class="center aligned">Codigo</th>
+                <th class="center aligned">Editar</th>
+                <th class="center aligned">Borrar</th>
             </tr>
         </thead>
         <tbody>
