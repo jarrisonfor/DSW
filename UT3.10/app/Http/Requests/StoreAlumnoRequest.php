@@ -56,7 +56,7 @@ class StoreAlumnoRequest extends FormRequest
             'c_postal.min' => 'El código postal debe tener al menos 3 caracteres',
             'c_postal.max' => 'El código postal no puede tener más de 255 caracteres',
             'codigo.required' => 'El código es obligatorio',
-            'codigo.regex' => 'El código debe tener el formato XXXX-X',
+            'codigo.regex' => 'El código debe tener el formato NNNN-X',
             'codigo.string' => 'El código debe ser una cadena de texto',
             'codigo.max' => 'El código no puede tener más de 255 caracteres',
         ];
