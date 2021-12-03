@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('usuario.index');
 });
 
 Route::get('/usuario/borrar', [UsuarioController::class, 'destroyAll'])->name('usuario.delete');

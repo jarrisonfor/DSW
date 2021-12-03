@@ -75,7 +75,7 @@
                         onShow: function() {
                             $.ajax({
                                 method: "GET",
-                                url: `{{ url('usuario') }}/${id.id}/publicaciones`,
+                                url: `usuario/${id.id}/publicaciones`,
                                 success: function(data) {
                                     $('.rows').html('');
                                     data.forEach(function(value, index) {
@@ -130,7 +130,7 @@
                         let tr = $(this).closest("tr");
                         $.ajax({
                             method: "POST",
-                            url: `{{ url('usuario') }}/${tr.data().id}`,
+                            url: `usuario/${tr.data().id}`,
                             data: {
                                 _method: 'DELETE',
                                 _token: "{{ csrf_token() }}",
