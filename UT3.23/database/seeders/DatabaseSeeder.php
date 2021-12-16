@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Pasaje;
+use App\Models\Piloto;
 use App\Models\Publicacion;
 use App\Models\Usuario;
+use App\Models\Vuelo;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,6 +18,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Usuario::factory(50)->has(Publicacion::factory()->count(10))->create();
+        Piloto::factory(25)
+            ->has(
+                Vuelo::factory()
+                    ->has(
+                        Pasaje::factory()
+                            ->count(10)
+                        )
+                    ->count(4)
+            )->create();
     }
 }

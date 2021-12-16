@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PublicacionFactory extends Factory
+class PasajeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,9 +14,9 @@ class PublicacionFactory extends Factory
     public function definition()
     {
         return [
-            'titulo' => $this->faker->sentence(1),
-            'publicacion' => $this->faker->sentence(1),
-            'fecha' => $this->faker->date,
+            'nombre' => $this->faker->name,
+            'apellidos' => $this->faker->lastName,
+            'precio' => $this->faker->randomFloat(2, 5, 500),
         ];
     }
 }
