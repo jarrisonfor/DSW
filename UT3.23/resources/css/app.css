@@ -2,10 +2,5 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body {
-    border: 4px solid greenyellow;
-    margin: 40px;
-    padding: 40px;
-    border-radius: 20px
-  }
+
   
