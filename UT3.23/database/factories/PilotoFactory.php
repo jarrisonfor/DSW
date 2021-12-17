@@ -19,7 +19,7 @@ class PilotoFactory extends Factory
             'f_nacimiento' => $this->faker->date(),
             'email' => $this->faker->email(),
             'dni' => $this->faker->dni(),
-            'telefono' => $this->faker->word(),
+            'telefono' => $this->faker->numerify('#########'),
         ];
     }
 }

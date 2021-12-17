@@ -10,15 +10,15 @@
     <table class="principal w-100">
         <thead>
             <tr>
-                <th data-orderable="false">Id</th>
-                <th data-orderable="false">Codigo</th>
+                <th>Id</th>
+                <th>Codigo</th>
                 <th>Origen</th>
                 <th>Destino</th>
-                <th data-orderable="false">Fecha</th>
-                <th data-orderable="false">Hora</th>
-                <th data-orderable="false">Ver</th>
-                <th data-orderable="false">Editar</th>
-                <th data-orderable="false">Borrar</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
             </tr>
         </thead>
         <tbody>
