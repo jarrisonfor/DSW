@@ -28,7 +28,7 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        $invoices = Invoice::orderBy('id', 'desc')->get();
+        $invoices = Invoice::all();
         return view('invoice.index', ['invoices' => $invoices]);
     }
 
@@ -108,8 +108,8 @@ class InvoiceController extends Controller
      */
     public function edit(Invoice $invoice)
     {
-        $products = Product::orderBy('id', 'desc')->get();
-        $clients = Client::orderBy('id', 'desc')->get();
+        $products = Product::all();
+        $clients = Client::all();
         return view('invoice.edit', ['invoice' => $invoice, 'clients' => $clients, 'products' => $products]);
     }
 
