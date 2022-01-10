@@ -82,7 +82,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                             document.getElementById('logout-form').submit();">
+                                                                                                 document.getElementById('logout-form').submit();">
                                     Cerrar sesión
                                 </a>
 
@@ -107,7 +107,10 @@
             $('table').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
-                }
+                },
+                "order": [
+                    [0, "desc"]
+                ]
             });
         });
     </script>
