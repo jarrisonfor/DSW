@@ -45,25 +45,10 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="alias" class="col-md-4 col-form-label text-md-right">Alias</label>
-
-                                <div class="col-md-6">
-                                    <input id="alias" type="alias" class="form-control @error('alias') is-invalid @enderror"
-                                        name="alias" value="{{ $user->alias }}" required autocomplete="off">
-
-                                    @error('alias')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
 
-                                <div class="col-md-6">
-                                    <input id="password" type="password"
+                                <div clliasss="col-md-6">
+                                    <input id="pliasssword" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
                                         required autocomplete="off">
 

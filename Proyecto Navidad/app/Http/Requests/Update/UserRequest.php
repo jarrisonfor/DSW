@@ -27,7 +27,6 @@ class UserRequest extends FormRequest
         return [
             'name' => 'sometimes|required|string|max:255',
             'email' => 'sometimes|required|string|email|max:255|unique:users',
-            'alias' => 'sometimes|required|string|min:1|max:2|unique:users',
             'password' => 'sometimes|required|string|min:6|confirmed',
         ];
     }
@@ -43,11 +42,6 @@ class UserRequest extends FormRequest
             'email.email' => 'El email debe ser un email válido',
             'email.max' => 'El email debe tener como máximo 255 caracteres',
             'email.unique' => 'El email ya existe',
-            'alias.required' => 'El alias es requerido',
-            'alias.string' => 'El alias debe ser una cadena de texto',
-            'alias.max' => 'El alias debe tener como minimo 1 caracter',
-            'alias.max' => 'El alias debe tener como máximo 2 caracteres',
-            'alias.unique' => 'El alias ya existe',
             'password.required' => 'La contraseña es requerida',
             'password.string' => 'La contraseña debe ser una cadena de texto',
             'password.min' => 'La contraseña debe tener como mínimo 6 caracteres',
