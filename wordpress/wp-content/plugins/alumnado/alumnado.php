@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Alumnado
+ * Plugin Name:       alumnos
  **/
 
 
