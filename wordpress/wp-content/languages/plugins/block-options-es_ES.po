@@ -1,0 +1,372 @@
+# Translation of Plugins - Gutenberg Block Editor Toolkit – EditorsKit - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Gutenberg Block Editor Toolkit – EditorsKit - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-01-27 13:14:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Gutenberg Block Editor Toolkit – EditorsKit - Stable (latest release)\n"
+
+#: includes/class-editorskit-responsive-preview.php:136
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: includes/class-editorskit-features-manager.php:315
+msgid "Live Preview with Responsive Controls"
+msgstr "Vista previa en vivo con controles adaptables"
+
+#. translators: %s: EditorsKit settings page link
+#: includes/class-editorskit-welcome.php:188
+msgid "Thank you for installing and activating EditorsKit Plugin. Please go to %1$sSettings > EditorsKit%2$s to get started."
+msgstr "Gracias por instalar y activar el plugin EditorsKit. Por favor, ve a %1$sAjustes > EditorsKit%2$s para empezar."
+
+#: includes/class-editorskit-responsive-preview.php:145
+#: src/extensions/advanced-controls/options/devices/index.js:79
+msgid "Tablet"
+msgstr "Tableta"
+
+#: includes/class-editorskit-responsive-preview.php:154
+#: src/extensions/advanced-controls/options/devices/index.js:74
+msgid "Mobile"
+msgstr "Móvil"
+
+#: includes/class-editorskit-user-feedback.php:286
+msgid "No thanks / I already have"
+msgstr "No, gracias / Ya lo he hecho"
+
+#: includes/class-editorskit-user-feedback.php:285
+msgid "Leave a Review"
+msgstr "Deja una reseña"
+
+#. translators: 1. Name, 2. Time
+#: includes/class-editorskit-user-feedback.php:281
+msgid "You have been using %1$s for %2$s now. Mind leaving a review to let us know know what you think? We'd really appreciate it!"
+msgstr "Has estado usando %1$s desde hace %2$s. ¿Te importa dejar un comentario para hacernos saber lo que piensas? ¡Realmente lo agradeceríamos!"
+
+#. translators: 1. Name
+#: includes/class-editorskit-user-feedback.php:278
+msgid "Are you enjoying %s Plugin?"
+msgstr "¿Estás disfrutando del plugin %s?"
+
+#. translators: 1. Name
+#: includes/class-editorskit-user-feedback.php:274
+msgid "%s WordPress Plugin"
+msgstr "Plugin %s para WordPress"
+
+#: includes/class-editorskit-user-feedback.php:142
+msgid "a second"
+msgstr "un segundo"
+
+#. translators: Number of seconds
+#: includes/class-editorskit-user-feedback.php:140
+msgid "%s seconds"
+msgstr "%s segundos"
+
+#: includes/class-editorskit-user-feedback.php:133
+msgid "a minute"
+msgstr "un minuto"
+
+#. translators: Number of minutes
+#: includes/class-editorskit-user-feedback.php:131
+msgid "%s minutes"
+msgstr "%s minutos"
+
+#: includes/class-editorskit-user-feedback.php:124
+msgid "an hour"
+msgstr "una hora"
+
+#. translators: Number of hours
+#: includes/class-editorskit-user-feedback.php:122
+msgid "%s hours"
+msgstr "%s horas"
+
+#: includes/class-editorskit-user-feedback.php:115
+msgid "a day"
+msgstr "un día"
+
+#. translators: Number of days
+#: includes/class-editorskit-user-feedback.php:113
+msgid "%s days"
+msgstr "%s días"
+
+#: includes/class-editorskit-user-feedback.php:106
+msgid "a week"
+msgstr "una semana"
+
+#. translators: Number of weeks
+#: includes/class-editorskit-user-feedback.php:104
+msgid "%s weeks"
+msgstr "%s semanas"
+
+#: includes/class-editorskit-user-feedback.php:97
+msgid "a year"
+msgstr "un año"
+
+#: includes/class-editorskit-welcome.php:151
+msgid "Getting started with EditorsKit"
+msgstr "Comenzando con EditorsKit"
+
+#: plugin.php:73 plugin.php:85
+msgid "Cheating huh?"
+msgstr "Haciendo trampas, ¿eh?"
+
+#: includes/class-editorskit-post-meta.php:158
+#: includes/class-editorskit-post-meta.php:169
+msgid "Default typography"
+msgstr "Tipografía por defecto"
+
+#: includes/class-editorskit-post-meta.php:147
+msgid "Custom typography"
+msgstr "Tipografía personalizada"
+
+#: extendify-sdk/app/Plugin.php:80
+msgid "An unknown error occurred during installation"
+msgstr "Ha ocurrido un error desconocido durante la instalación"
+
+#: extendify-sdk/app/Plugin.php:74
+msgid "There was an error installing your plugin"
+msgstr "Ha habido un error al instalar tu plugin"
+
+#: extendify-sdk/app/Plugin.php:58
+msgid "You are not allowed to install plugins on this site."
+msgstr "No tienes permisos para instalar plugins en este sitio."
+
+#: extendify-sdk/app/Controllers/PluginController.php:53
+#: extendify-sdk/app/Plugin.php:36
+msgid "You are not allowed to activate plugins on this site."
+msgstr "No tienes permisos para activar plugins en este sitio."
+
+#: includes/class-editorskit-features-manager.php:295
+msgid "Gradient Controls"
+msgstr "Controles de gradiente"
+
+#: includes/class-editorskit-features-manager.php:162
+#: src/extensions/formats/charmap/controls.js:161
+#: src/extensions/formats/charmap/index.js:19
+msgid "Special Characters"
+msgstr "Caracteres especiales"
+
+#: includes/class-editorskit-post-meta.php:135
+msgid "API key and token from shareablock.com"
+msgstr "Clave API y token de shareablock.com"
+
+#: includes/class-editorskit-features-manager.php:239
+msgid "Link Toolbar for Cover, Group & Column"
+msgstr "Barra de herramientas para fondos, grupos y columnas"
+
+#: includes/class-editorskit-features-manager.php:142
+msgid "Indents"
+msgstr "Sangrías"
+
+#: includes/class-editorskit-features-manager.php:219
+msgid "Button Block Full Width"
+msgstr "Bloque de botón en ancho complet"
+
+#: includes/class-editorskit-features-manager.php:224
+msgid "Columns Block Background Color"
+msgstr "Color de fondo del bloque de columnas"
+
+#: includes/class-editorskit-features-manager.php:127
+#: src/extensions/formats/abbreviation/components/edit.js:47
+#: src/extensions/formats/abbreviation/index.js:19
+msgid "Abbreviation"
+msgstr "Abreviatura"
+
+#: includes/class-editorskit-features-manager.php:249
+msgid "List Block Text Color"
+msgstr "Color de texto del bloque de lista"
+
+#: includes/class-editorskit-features-manager.php:244
+msgid "List Block Font Size"
+msgstr "Tamaño de fuente del bloque de lista"
+
+#: includes/class-editorskit-features-manager.php:331
+msgid "Select Parent Block"
+msgstr "Selecciona el bloque superior"
+
+#: includes/class-editorskit-features-manager.php:327
+msgid "Shortcuts"
+msgstr "Atajos"
+
+#: includes/class-editorskit-features-manager.php:157
+#: src/extensions/formats/nbsp/index.js:19
+msgid "Nonbreaking Space"
+msgstr "Espacio sin salto"
+
+#: includes/class-editorskit-features-manager.php:300
+#: src/extensions/components/help-tips/components/controls.js:105
+#: src/extensions/components/help-tips/components/controls.js:106
+msgid "Help, tips and tricks"
+msgstr "Ayuda, trucos y consejos"
+
+#: includes/class-editorskit-features-manager.php:208
+#: src/admin/docs/index.js:81
+msgid "Transform 3 Empty Paragraphs to Spacer Block"
+msgstr "Transformar 3 párrafos vacíos en un bloque de espaciador"
+
+#: includes/class-editorskit-features-manager.php:254
+msgid "Media Text Block Layout"
+msgstr "Diseño del bloque de medios y texto"
+
+#: includes/class-editorskit-features-manager.php:229
+#: src/extensions/block-toolbar/block-navigator/components/controls.js:43
+msgid "Block Navigator"
+msgstr "Navegador de bloques"
+
+#: includes/class-editorskit-features-manager.php:215
+#: src/admin/docs/index.js:221
+msgid "Block Options"
+msgstr "Opciones del bloque"
+
+#: includes/class-editorskit-features-manager.php:193
+msgid "Estimated Reading Time"
+msgstr "Tiempo de lectura estimado"
+
+#: includes/class-editorskit-features-manager.php:152
+msgid "Link with \"rel\" Attributes"
+msgstr "Enlace con atributos «rel»"
+
+#: includes/class-editorskit-features-manager.php:285
+#: src/admin/docs/index.js:119
+msgid "Drag and Drop Featured Image"
+msgstr "Arrastrar y soltar imagen destacada"
+
+#: includes/class-editorskit-features-manager.php:259
+msgid "Set Image Block as Featured"
+msgstr "Configura un bloque de imagen como imagen destacada"
+
+#: includes/class-editorskit-features-manager.php:198
+msgid "Heading Block Label"
+msgstr "Etiqueta del bloque de encabezado"
+
+#: includes/class-editorskit-features-manager.php:310
+#: src/extensions/components/scroll-down/components/scrolldown.js:36
+msgid "View Custom Fields"
+msgstr "Ver campos personalizados"
+
+#: includes/class-editorskit-features-manager.php:275
+msgid "Code Editor Syntax Highlight"
+msgstr "Resaltado de sintaxis del editor de código"
+
+#: includes/class-editorskit-features-manager.php:290
+msgid "Editor Min-Height"
+msgstr "Altura mínima del editor"
+
+#: includes/class-editorskit-features-manager.php:280
+msgid "Custom Class Names"
+msgstr "Nombres de clases personalizadas"
+
+#: includes/class-editorskit-features-manager.php:234
+#: src/extensions/block-settings/export/components/export.js:77
+msgid "Export as JSON"
+msgstr "Exportar como JSON"
+
+#. translators: Number of years
+#: includes/class-editorskit-user-feedback.php:95
+msgid "%s years"
+msgstr "%s años"
+
+#: includes/class-editorskit-features-manager.php:305
+msgid "Toggle Title Visibility"
+msgstr "Cambiar la visibilidad del título"
+
+#: includes/class-editorskit-features-manager.php:266
+#: src/admin/docs/index.js:238
+msgid "Tools"
+msgstr "Herramientas"
+
+#: includes/class-editorskit-features-manager.php:203
+msgid "Markdown"
+msgstr "Markdown"
+
+#: includes/class-editorskit-features-manager.php:189
+#: src/admin/docs/index.js:204
+msgid "Writing"
+msgstr "Escritura"
+
+#: includes/class-editorskit-features-manager.php:182
+#: src/add-ons/typography/src/components/font-selection/index.js:491
+#: src/extensions/formats/uppercase/controls.js:32
+#: src/extensions/formats/uppercase/index.js:19
+msgid "Uppercase"
+msgstr "Mayúsculas"
+
+#: includes/class-editorskit-features-manager.php:172
+#: src/extensions/formats/superscript/controls.js:45
+#: src/extensions/formats/superscript/index.js:19
+msgid "Superscript"
+msgstr "Superíndice"
+
+#: includes/class-editorskit-features-manager.php:167
+#: src/extensions/formats/subscript/controls.js:45
+#: src/extensions/formats/subscript/index.js:19
+msgid "Subscript"
+msgstr "Subíndice"
+
+#: includes/class-editorskit-features-manager.php:147
+msgid "Justified Alignment"
+msgstr "Alineación justificada"
+
+#: includes/class-editorskit-features-manager.php:137
+msgid "Highlighted Text Color"
+msgstr "Color de texto resaltado"
+
+#: includes/class-editorskit-features-manager.php:132
+#: src/admin/docs/index.js:66 src/extensions/formats/clear/controls.js:39
+#: src/extensions/formats/clear/index.js:19
+msgid "Clear Formatting"
+msgstr "Borrar formato"
+
+#: includes/class-editorskit-features-manager.php:123
+msgid "Formats"
+msgstr "Formatos"
+
+#: includes/class-editorskit-features-manager.php:92
+msgid "ACF Support"
+msgstr "Compatibilidad con ACF"
+
+#: includes/class-editorskit-features-manager.php:110
+msgid "Display Logic"
+msgstr "Lógica de visualización"
+
+#: includes/class-editorskit-features-manager.php:102
+msgid "User Login State"
+msgstr "Estado de inicio de sesión del usuario"
+
+#: includes/class-editorskit-features-manager.php:118
+msgid "Visibility"
+msgstr "Visibilidad"
+
+#: includes/class-editorskit-features-manager.php:177
+#: src/extensions/formats/markdown/index.js:20
+#: src/extensions/formats/underline/index.js:17
+#: src/extensions/formats/underline/index.js:48
+msgid "Underline"
+msgstr "Subrayar"
+
+#: includes/class-editorskit-features-manager.php:270
+#: src/extensions/components/guidelines/components/menu.js:67
+msgid "Block Guide Lines"
+msgstr "Líneas de guía en los bloques"
+
+#: includes/class-editorskit-features-manager.php:97
+msgid "Devices"
+msgstr "Dispositivos"
+
+#. Description of the plugin
+msgid "EditorsKit is a suite of <strong>page building block options</strong> for the Gutenberg block editor."
+msgstr "EditorsKit es un conjunto de <strong>opciones de bloques para crear páginas</strong> con el editor de bloques Gutenberg."
+
+#. Plugin URI of the plugin
+msgid "https://editorskit.com/"
+msgstr "https://editorskit.com/"
+
+#. Plugin Name of the plugin
+#: includes/class-editorskit-user-feedback.php:315
+#: includes/class-editorskit-welcome.php:152
+msgid "EditorsKit"
+msgstr "EditorsKit"

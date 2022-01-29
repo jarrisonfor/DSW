@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Code Snippets - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-14 05:03:12+0000\n"
+"PO-Revision-Date: 2022-01-20 09:10:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -482,7 +482,7 @@ msgstr "Introduce aquí el título"
 
 #: php/admin-menus/class-edit-menu.php:724 php/class-list-table.php:192
 msgid "'Cancel' to stop, 'OK' to delete."
-msgstr "«Cancelar» para parar, «Aceptar» para borrar."
+msgstr "«Cancelar» para detener, «Aceptar» para borrar."
 
 #: php/class-list-table.php:191
 msgid "You are about to permanently delete the selected item."
@@ -653,7 +653,7 @@ msgstr "Números de línea"
 
 #: php/settings/settings-fields.php:157
 msgid "Whether the editor should scroll or wrap for long lines."
-msgstr "Si el editor debe desplazarse o envolverse para líneas largas."
+msgstr "Si el editor debe desplazarse o envolver las líneas largas."
 
 #: php/settings/settings-fields.php:155
 msgid "Wrap Lines"
@@ -750,7 +750,7 @@ msgstr "Puedes guardar tus fragmentos de código en un archivo de exportación d
 
 #: php/class-contextual-help.php:148
 msgid "Exporting"
-msgstr "Exportando"
+msgstr "Exportación"
 
 #. translators: %s: URL to Snippets admin menu
 #: php/class-contextual-help.php:143
@@ -763,7 +763,7 @@ msgstr "Puedes cargar tus fragmentos de código desde un archivo de exportación
 
 #: php/class-contextual-help.php:139
 msgid "Importing"
-msgstr "Importando"
+msgstr "Importación"
 
 #: php/class-contextual-help.php:120
 msgid "Please be sure to check that your snippet is valid PHP code and will not produce errors before adding it through this page. While doing so will not become active straight away, it will help to minimise the chance of a faulty snippet becoming active on your site."
@@ -876,7 +876,7 @@ msgstr "Nombre"
 
 #: php/class-list-table.php:269
 msgid "Shared on Network"
-msgstr "Compartido en red"
+msgstr "Compartido en la red"
 
 #. translators: %d: snippet identifier
 #: php/class-list-table.php:245
