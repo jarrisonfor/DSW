@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:  7. Shortcode
+ * Plugin Name:  5. Shortcode
  **/
 
 add_action('init', 'crearShortCodeCiclos');
