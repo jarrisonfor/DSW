@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 // create express app
 const app = express();
@@ -8,22 +9,20 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 // Configuring the database
-const dbConfig = require('./config/database.config.js');
-const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
 const opts = {
-    dbName: dbConfig.auth.database,
-    user: dbConfig.auth.user,
-    pass: dbConfig.auth.pass,
+    //dbName: dbConfig.auth.database,
+    //user: dbConfig.auth.user,
+    //pass: dbConfig.auth.pass,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     bufferCommands: false,
 }
 
 // Connecting to the database
-mongoose.connect(dbConfig.url, opts).then(() => {
+mongoose.connect('mongodb://localhost:27017/UT51', opts).then(() => {
     console.log("Successfully connected to the database");
 }).catch(err => {
     console.log('Could not connect to the database. Exiting now...', err);
