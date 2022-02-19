@@ -1,2 +1,3 @@
 IndexIgnore .htaccess
 IndexIgnore goorm.manifest
+IndexIgnore *.sh
