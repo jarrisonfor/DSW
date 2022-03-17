@@ -70,7 +70,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('invoice/{invoice}/pdf', [InvoiceController::class, 'pdf'])->name('invoice.pdf');
         Route::get('invoice/{invoice}/email', [InvoiceController::class, 'sendInvoiceEmail'])->name('invoice.email');
         Route::get('/', function () {
-            return view('dashboard', ['invoices' => Invoice::select()->sortBy('created_at')->get(), 'products' => Product::all(), 'clients' => Client::all()]);
+            return view('dashboard', ['invoices' => Invoice::select()->orderBy('created_at')->get(), 'products' => Product::all(), 'clients' => Client::all()]);
         })->name('dashboard');
 
         Route::get('client', [ClientController::class, 'index'])->name('client.index');
