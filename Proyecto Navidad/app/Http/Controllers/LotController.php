@@ -18,7 +18,7 @@ class LotController extends Controller
      */
     public function index(Request $request)
     {
-        $lots = Lot::where('product_id', $request->product_id)->get();
+        $lots = Lot::where('product_id', $request->product_id)->orderBy('created_at', 'desc')->get();
         return view('lot.index', ['lots' => $lots, 'product' => Product::find($request->product_id)]);
     }
 
