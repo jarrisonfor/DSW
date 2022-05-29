@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-        if (Request::server('HTTP_X_FORWARDED_PROTO') == 'https') {
+        if(env('FORCE_HTTPS', false)) {
             URL::forceScheme('https');
         }
         Gate::before(function ($user) {
