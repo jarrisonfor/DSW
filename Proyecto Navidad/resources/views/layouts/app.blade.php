@@ -22,8 +22,11 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@^1"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
@@ -96,8 +99,8 @@
                     @endguest
                 </ul>
             </div>
+        </nav>
     </div>
-    </nav>
 
     <main class="container py-4">
         @yield('contenido')

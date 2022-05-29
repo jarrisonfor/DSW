@@ -9,9 +9,8 @@
         <div class="col-sm-4 mt-3">
             <div class="card">
                 <div class="card-body text-center">
-                    <h2 class="card-title">Facturas</h2>
-                    <h1>{{ count($invoices) }}</h1>
-                    <a href="{{ route('invoice.index') }}" class="stretched-link"></a>
+                    <h2 class="card-title">Hoy</h2>
+                    <canvas id="today"></canvas>
                 </div>
             </div>
         </div>
@@ -19,11 +18,8 @@
         <div class="col-sm-4 mt-3">
             <div class="card">
                 <div class="card-body text-center">
-                    <h2 class="card-title">Productos</h2>
-                    <h1>{{ count($products) }}</h1>
-                    @if (@Auth::user()->hasRole('admin'))
-                        <a href="{{ route('product.index') }}" class="stretched-link"></a>
-                    @endif
+                    <h2 class="card-title">Esta semana</h2>
+                    <canvas id="week"></canvas>
                 </div>
             </div>
         </div>
@@ -31,9 +27,8 @@
         <div class="col-sm-4 mt-3">
             <div class="card">
                 <div class="card-body text-center">
-                    <h2 class="card-title">Clientes</h2>
-                    <h1>{{ count($clients) }}</h1>
-                    <a href="{{ route('client.index') }}" class="stretched-link"></a>
+                    <h2 class="card-title">Este año</h2>
+                    <canvas id="year"></canvas>
                 </div>
             </div>
         </div>
@@ -79,6 +74,167 @@
                 @endforeach
             </tbody>
         </table>
+        <script>
+            window.onload = function () {
+                Chart.register(window['chartjs-plugin-autocolors']);
+                moment.locale('es');
+                let now = moment();
+                let invoices = <?php echo json_encode($invoices->toArray(), JSON_NUMERIC_CHECK); ?>;
+                let yearConfig = {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            data: [],
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            autocolors: {
+                                mode: 'data'
+                            },
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: () => { },
+                                    label: (context) => {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.y !== null) {
+                                            label += '';
+                                        }
+                                        return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(context.parsed.y);
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: label => `${label}€`
+                                }
+                            }
+                        }
+                    }
+                };
+                yearConfig.data.labels = moment.monthsShort().map(month => month.charAt(0).toUpperCase() + month.slice(1).replace(/^\.+|\.+$/g, ''));
+                yearConfig.data.datasets[0].data = yearConfig.data.labels.map((month, i) => {
+                    let totalMonth = 0;
+                    invoices.forEach(invoice => {
+                        let invoiceMoment = moment(invoice.datetime);
+                        if (invoiceMoment.month() === i && invoiceMoment.year() === now.year()) {
+                            totalMonth += invoice.totalAmount;
+                        }
+                    });
+                    return totalMonth;
+                });
+                var yearChart = new Chart(document.getElementById("year").getContext('2d'), yearConfig);
+
+                let weekConfig = {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            data: [],
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            autocolors: {
+                                mode: 'data'
+                            },
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: () => { },
+                                    label: (context) => {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.y !== null) {
+                                            label += new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(context.parsed.y);
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: label => `${label}€`
+                                }
+                            }
+                        }
+                    }
+                };
+                weekConfig.data.labels = moment.weekdaysShort(true).map(week => week.charAt(0).toUpperCase() + week.slice(1).replace(/^\.+|\.+$/g, ''));
+                weekConfig.data.datasets[0].data = weekConfig.data.labels.map((week, i) => {
+                    let totalWeek = 0;
+                    invoices.forEach(invoice => {
+                        let invoiceMoment = moment(invoice.datetime);
+                        if (invoiceMoment.weekday() === i && invoiceMoment.month() === now.month() && invoiceMoment.year() === now.year()) {
+                            totalWeek += invoice.totalAmount;
+                        }
+                    });
+                    return totalWeek;
+                });
+                var weekChart = new Chart(document.getElementById("week").getContext('2d'), weekConfig);
+
+                let todayConfig = {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            data: [],
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            autocolors: {
+                                mode: 'data'
+                            },
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: () => { },
+                                    label: (context) => {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.y !== null) {
+                                            label += '';
+                                        }
+                                        return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(context.parsed.y);
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: label => `${label}€`
+                                }
+                            }
+                        }
+                    }
+                };
+                let todayInvoices = invoices.filter((invoice) => moment(invoice.datetime).isSame(now, 'day'));
+                todayConfig.data.labels = todayInvoices.map(invoice => moment(invoice.datetime).format("HH:mm"));
+                todayConfig.data.datasets[0].data = todayInvoices.map(invoice => invoice.totalAmount);
+                var todayChart = new Chart(document.getElementById("today").getContext('2d'), todayConfig);
+            };
+        </script>
     </div>
 
 @endsection
